@@ -55,6 +55,7 @@ usertype
 FROM dbo.['Divvy_Trips_2015-Q1$']
 GROUP BY from_station_name, usertype
 ORDER BY usertype, total_rides DESC
+LIMIT 10;
 
 
 SELECT 
@@ -64,27 +65,4 @@ usertype
 FROM dbo.['Divvy_Trips_2015-Q1$']
 GROUP BY to_station_name, usertype
 ORDER BY usertype, total_rides DESC
-
-
-select*
-from dbo.['Divvy_Trips_2015-Q1$']
-where usertype = 'customer'
-
-select *
-from dbo.['Divvy_Trips_2015-Q1$']
-where usertype like 'sub%'
-
-
-select*
-from dbo.['Divvy_Trips_2015-Q1$']
-where usertype = 'subscriber' and gender = 'male'
-
-select*
-from dbo.['Divvy_Trips_2015-Q1$']
-where usertype = 'subscriber' and gender = 'female'
-order by birthyear desc
-
-
-select count(*)
-from dbo.['Divvy_Trips_2015-Q1$']
-
+LIMIT 10;
